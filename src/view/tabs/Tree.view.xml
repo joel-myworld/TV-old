@@ -1,0 +1,25 @@
+<mvc:View 
+        xmlns:mvc="sap.ui.core.mvc" 
+        controllerName="com.siemens.tableViewer.controller.tabs.Tree" 
+        xmlns:m="sap.m" 
+        xmlns="sap.ui.table"
+        xmlns:custom="com.siemens.tableViewer.control">
+	<custom:CustomTreeTable
+			id="siemensUiTree"
+			enableBusyIndicator="true"
+			visibleRowCount="15"
+			rowHeight="23"
+			visibleRowCountMode="{path: 'mainConfig>/INTERACTIVE_TABLE', formatter: '.formatter.isTableInteractive'}"
+			busy="{treeView>/busy}"
+			busyIndicatorDelay="{treeView>/delay}">
+		<custom:toolbar>
+			<m:Toolbar design="Transparent">
+				<m:Title text="{mainConfig>/TABLE_TITLE}"/>
+				<m:ToolbarSpacer/>
+				<m:ToggleButton icon="sap-icon://full-screen" pressed="false" press="onToggleFullScreen"/>
+				<m:Button type="Default" text="{i18n>table.export}" icon="sap-icon://download" press="onExportToExcel"/>
+				<m:Button type="Default" icon="sap-icon://action-settings" press="onTablePersonalization"/>
+			</m:Toolbar>
+		</custom:toolbar>
+	</custom:CustomTreeTable>
+</mvc:View>

@@ -1,0 +1,232 @@
+{
+	"d": {
+		"results": [{
+			"__metadata": {
+				"type": "siemens.COMMON_DEV.xs.services.tableViewerOData.main.DimensionsMeasuresType",
+				"uri": "https://demchdc9scx.dc4ca.siemens.de:4300/siemens/COMMON_DEV/xs/services/tableViewerOData/main.xsodata/DimensionsMeasures(CTRLID='CTRL1',CHARTID='c1',COLUMN='CALMONTH')"
+			},
+			"CTRLID": "CTRL1",
+			"CHARTID": "c1",
+			"COLUMN": "CALMONTH",
+			"LABEL": "Calmonth",
+			"IS_KFG": 0,
+			"CTYPE": 17
+		},
+		{
+			"__metadata": {
+				"type": "siemens.COMMON_DEV.xs.services.tableViewerOData.main.DimensionsMeasuresType",
+				"uri": "https://demchdc9scx.dc4ca.siemens.de:4300/siemens/COMMON_DEV/xs/services/tableViewerOData/main.xsodata/DimensionsMeasures(CTRLID='CTRL1',CHARTID='c1',COLUMN='ERDAT')"
+			},
+			"CTRLID": "CTRL1",
+			"CHARTID": "c1",
+			"COLUMN": "ERDAT",
+			"LABEL": "Creation date",
+			"IS_KFG": 0,
+			"CTYPE": 15
+		},
+		{
+			"__metadata": {
+				"type": "siemens.COMMON_DEV.xs.services.tableViewerOData.main.DimensionsMeasuresType",
+				"uri": "https://demchdc9scx.dc4ca.siemens.de:4300/siemens/COMMON_DEV/xs/services/tableViewerOData/main.xsodata/DimensionsMeasures(CTRLID='CTRL1',CHARTID='c1',COLUMN='ERDAT_DATE')"
+			},
+			"CTRLID": "CTRL1",
+			"CHARTID": "c1",
+			"COLUMN": "ERDAT_DATE",
+			"LABEL": "Creation date 2",
+			"IS_KFG": 0,
+			"CTYPE": 20
+		},
+		{
+			"__metadata": {
+				"type": "siemens.COMMON_DEV.xs.services.tableViewerOData.main.DimensionsMeasuresType",
+				"uri": "https://demchdc9scx.dc4ca.siemens.de:4300/siemens/COMMON_DEV/xs/services/tableViewerOData/main.xsodata/DimensionsMeasures(CTRLID='CTRL1',CHARTID='c1',COLUMN='LOCAT_CAL')"
+			},
+			"CTRLID": "CTRL1",
+			"CHARTID": "c1",
+			"COLUMN": "LOCAT_CAL",
+			"LABEL": "Location",
+			"IS_KFG": 0,
+			"CTYPE": 11
+		},
+		{
+			"__metadata": {
+				"type": "siemens.COMMON_DEV.xs.services.tableViewerOData.main.DimensionsMeasuresType",
+				"uri": "https://demchdc9scx.dc4ca.siemens.de:4300/siemens/COMMON_DEV/xs/services/tableViewerOData/main.xsodata/DimensionsMeasures(CTRLID='CTRL1',CHARTID='c1',COLUMN='NUCAF')"
+			},
+			"CTRLID": "CTRL1",
+			"CHARTID": "c1",
+			"COLUMN": "NUCAF",
+			"LABEL": "Number of candidate failed",
+			"IS_KFG": 1,
+			"CTYPE": 3
+		},
+		{
+			"__metadata": {
+				"type": "siemens.COMMON_DEV.xs.services.tableViewerOData.main.DimensionsMeasuresType",
+				"uri": "https://demchdc9scx.dc4ca.siemens.de:4300/siemens/COMMON_DEV/xs/services/tableViewerOData/main.xsodata/DimensionsMeasures(CTRLID='CTRL1',CHARTID='c1',COLUMN='SELEC')"
+			},
+			"CTRLID": "CTRL1",
+			"CHARTID": "c1",
+			"COLUMN": "SELEC",
+			"LABEL": "Selec",
+			"IS_KFG": 0,
+			"CTYPE": 11
+		},
+		{
+			"__metadata": {
+				"type": "siemens.COMMON_DEV.xs.services.tableViewerOData.main.DimensionsMeasuresType",
+				"uri": "https://demchdc9scx.dc4ca.siemens.de:4300/siemens/COMMON_DEV/xs/services/tableViewerOData/main.xsodata/DimensionsMeasures(CTRLID='CTRL1',CHARTID='c1',COLUMN='TESTL')"
+			},
+			"CTRLID": "CTRL1",
+			"CHARTID": "c1",
+			"COLUMN": "TESTL",
+			"LABEL": "Material",
+			"IS_KFG": 0,
+			"CTYPE": 11
+		},
+		{
+			"__metadata": {
+				"type": "siemens.COMMON_DEV.xs.services.tableViewerOData.main.DimensionsMeasuresType",
+				"uri": "https://demchdc9scx.dc4ca.siemens.de:4300/siemens/COMMON_DEV/xs/services/tableViewerOData/main.xsodata/DimensionsMeasures(CTRLID='CTRL1',CHARTID='c2',COLUMN='CALMONTH')"
+			},
+			"CTRLID": "CTRL1",
+			"CHARTID": "c2",
+			"COLUMN": "CALMONTH",
+			"LABEL": "Calmonth",
+			"IS_KFG": 0,
+			"CTYPE": 17
+		},
+		{
+			"__metadata": {
+				"type": "siemens.COMMON_DEV.xs.services.tableViewerOData.main.DimensionsMeasuresType",
+				"uri": "https://demchdc9scx.dc4ca.siemens.de:4300/siemens/COMMON_DEV/xs/services/tableViewerOData/main.xsodata/DimensionsMeasures(CTRLID='CTRL1',CHARTID='c2',COLUMN='ERDAT_DATE')"
+			},
+			"CTRLID": "CTRL1",
+			"CHARTID": "c2",
+			"COLUMN": "ERDAT_DATE",
+			"LABEL": "Creation date 2",
+			"IS_KFG": 0,
+			"CTYPE": 20
+		},
+		{
+			"__metadata": {
+				"type": "siemens.COMMON_DEV.xs.services.tableViewerOData.main.DimensionsMeasuresType",
+				"uri": "https://demchdc9scx.dc4ca.siemens.de:4300/siemens/COMMON_DEV/xs/services/tableViewerOData/main.xsodata/DimensionsMeasures(CTRLID='CTRL1',CHARTID='c2',COLUMN='LOCAT_CAL')"
+			},
+			"CTRLID": "CTRL1",
+			"CHARTID": "c2",
+			"COLUMN": "LOCAT_CAL",
+			"LABEL": "Location",
+			"IS_KFG": 0,
+			"CTYPE": 11
+		},
+		{
+			"__metadata": {
+				"type": "siemens.COMMON_DEV.xs.services.tableViewerOData.main.DimensionsMeasuresType",
+				"uri": "https://demchdc9scx.dc4ca.siemens.de:4300/siemens/COMMON_DEV/xs/services/tableViewerOData/main.xsodata/DimensionsMeasures(CTRLID='CTRL1',CHARTID='c2',COLUMN='NUCAF')"
+			},
+			"CTRLID": "CTRL1",
+			"CHARTID": "c2",
+			"COLUMN": "NUCAF",
+			"LABEL": "Number of candidate failed",
+			"IS_KFG": 1,
+			"CTYPE": 3
+		},
+		{
+			"__metadata": {
+				"type": "siemens.COMMON_DEV.xs.services.tableViewerOData.main.DimensionsMeasuresType",
+				"uri": "https://demchdc9scx.dc4ca.siemens.de:4300/siemens/COMMON_DEV/xs/services/tableViewerOData/main.xsodata/DimensionsMeasures(CTRLID='CTRL1',CHARTID='c2',COLUMN='SELEC')"
+			},
+			"CTRLID": "CTRL1",
+			"CHARTID": "c2",
+			"COLUMN": "SELEC",
+			"LABEL": "Selec",
+			"IS_KFG": 0,
+			"CTYPE": 11
+		},
+		{
+			"__metadata": {
+				"type": "siemens.COMMON_DEV.xs.services.tableViewerOData.main.DimensionsMeasuresType",
+				"uri": "https://demchdc9scx.dc4ca.siemens.de:4300/siemens/COMMON_DEV/xs/services/tableViewerOData/main.xsodata/DimensionsMeasures(CTRLID='CTRL1',CHARTID='c2',COLUMN='TESTL')"
+			},
+			"CTRLID": "CTRL1",
+			"CHARTID": "c2",
+			"COLUMN": "TESTL",
+			"LABEL": "Material",
+			"IS_KFG": 0,
+			"CTYPE": 11
+		},
+		{
+			"__metadata": {
+				"type": "siemens.COMMON_DEV.xs.services.tableViewerOData.main.DimensionsMeasuresType",
+				"uri": "https://demchdc9scx.dc4ca.siemens.de:4300/siemens/COMMON_DEV/xs/services/tableViewerOData/main.xsodata/DimensionsMeasures(CTRLID='CTRL1',CHARTID='c3',COLUMN='TESTL')"
+			},
+			"CTRLID": "CTRL1",
+			"CHARTID": "c3",
+			"COLUMN": "TESTL",
+			"LABEL": "Material",
+			"IS_KFG": 0,
+			"CTYPE": 11
+		},
+		{
+			"__metadata": {
+				"type": "siemens.COMMON_DEV.xs.services.tableViewerOData.main.DimensionsMeasuresType",
+				"uri": "https://demchdc9scx.dc4ca.siemens.de:4300/siemens/COMMON_DEV/xs/services/tableViewerOData/main.xsodata/DimensionsMeasures(CTRLID='CTRL1',CHARTID='c3',COLUMN='NUCAF')"
+			},
+			"CTRLID": "CTRL1",
+			"CHARTID": "c3",
+			"COLUMN": "NUCAF",
+			"LABEL": "Number of candidate failed",
+			"IS_KFG": 1,
+			"CTYPE": 3
+		},
+		{
+			"__metadata": {
+				"type": "siemens.COMMON_DEV.xs.services.tableViewerOData.main.DimensionsMeasuresType",
+				"uri": "https://demchdc9scx.dc4ca.siemens.de:4300/siemens/COMMON_DEV/xs/services/tableViewerOData/main.xsodata/DimensionsMeasures(CTRLID='CTRL1',CHARTID='c4',COLUMN='TESTL')"
+			},
+			"CTRLID": "CTRL1",
+			"CHARTID": "c4",
+			"COLUMN": "TESTL",
+			"LABEL": "Material",
+			"IS_KFG": 0,
+			"CTYPE": 11
+		},
+		{
+			"__metadata": {
+				"type": "siemens.COMMON_DEV.xs.services.tableViewerOData.main.DimensionsMeasuresType",
+				"uri": "https://demchdc9scx.dc4ca.siemens.de:4300/siemens/COMMON_DEV/xs/services/tableViewerOData/main.xsodata/DimensionsMeasures(CTRLID='CTRL1',CHARTID='c4',COLUMN='NUCAF')"
+			},
+			"CTRLID": "CTRL1",
+			"CHARTID": "c4",
+			"COLUMN": "NUCAF",
+			"LABEL": "Number of candidate failed",
+			"IS_KFG": 1,
+			"CTYPE": 3
+		},
+		{
+			"__metadata": {
+				"type": "siemens.COMMON_DEV.xs.services.tableViewerOData.main.DimensionsMeasuresType",
+				"uri": "https://demchdc9scx.dc4ca.siemens.de:4300/siemens/COMMON_DEV/xs/services/tableViewerOData/main.xsodata/DimensionsMeasures(CTRLID='CTRL1',CHARTID='c5',COLUMN='TESTL')"
+			},
+			"CTRLID": "CTRL1",
+			"CHARTID": "c5",
+			"COLUMN": "TESTL",
+			"LABEL": "Material",
+			"IS_KFG": 0,
+			"CTYPE": 11
+		},
+		{
+			"__metadata": {
+				"type": "siemens.COMMON_DEV.xs.services.tableViewerOData.main.DimensionsMeasuresType",
+				"uri": "https://demchdc9scx.dc4ca.siemens.de:4300/siemens/COMMON_DEV/xs/services/tableViewerOData/main.xsodata/DimensionsMeasures(CTRLID='CTRL1',CHARTID='c5',COLUMN='NUCAF')"
+			},
+			"CTRLID": "CTRL1",
+			"CHARTID": "c5",
+			"COLUMN": "NUCAF",
+			"LABEL": "Number of candidate failed",
+			"IS_KFG": 1,
+			"CTYPE": 3
+		}]
+	}
+}

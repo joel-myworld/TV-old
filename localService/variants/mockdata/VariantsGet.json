@@ -1,0 +1,36 @@
+{
+  "d": {
+    "results": [
+      {
+        "__metadata": {
+          "type": "siemens.COMMON_DEV.xs.services.tableViewerOData.variants.VariantsSetType",
+          "uri": "https://demchdc9scx.dc4ca.siemens.de:4300/siemens/COMMON_DEV/xs/services/tableViewerOData/variants.xsodata/VariantsSet(CTRLID='CTRL1',VariantId='SV1469191473897',UserId='Z003N17Z')"
+        },
+        "CTRLID": "CTRL1",
+        "VariantId": "SV1469191473897",
+        "UserId": "Z003N17Z",
+        "VariantName": "test",
+        "isDefault": 0,
+        "isGlobal": 0,
+        "isHidden": 0,
+        "forUsers": "",
+        "filterObject": "%5B%7B%22sFieldName%22%3A%22LOCAT_CAL%22%2C%22aTokens%22%3A%22%5B%7B%5C%22sKey%5C%22%3A%5C%22DA1%5C%22%2C%5C%22sText%5C%22%3A%5C%22DA1%20%28DA1%29%5C%22%2C%5C%22sCustomData%5C%22%3A%5C%22%7B%5C%5C%5C%22__metadata%5C%5C%5C%22%3A%7B%5C%5C%5C%22type%5C%5C%5C%22%3A%5C%5C%5C%22siemens.COMMON_DEV.xs.services.tableViewerOData.srv1.FreeDateCrossPlantType%5C%5C%5C%22%2C%5C%5C%5C%22uri%5C%5C%5C%22%3A%5C%5C%5C%22https%3A//demchdc9scx.dc4ca.siemens.de%3A4300/siemens/COMMON_DEV/xs/services/tableViewerOData/srv1.xsodata/FreeDateCrossPlant%28%2744360949193629671%27%29%5C%5C%5C%22%7D%2C%5C%5C%5C%22LOCAT_CAL%5C%5C%5C%22%3A%5C%5C%5C%22DA1%5C%5C%5C%22%7D%5C%22%7D%5D%22%7D%5D"
+      },
+      {
+        "__metadata": {
+          "type": "siemens.COMMON_DEV.xs.services.tableViewerOData.variants.VariantsSetType",
+          "uri": "https://demchdc9scx.dc4ca.siemens.de:4300/siemens/COMMON_DEV/xs/services/tableViewerOData/variants.xsodata/VariantsSet(CTRLID='CTRL1',VariantId='SV1469191473891',UserId='Z003N17Z')"
+        },
+        "CTRLID": "CTRL1",
+        "VariantId": "SV1469191473891",
+        "UserId": "Z003N17Z",
+        "VariantName": "Global",
+        "isDefault": 0,
+        "isGlobal": 1,
+        "isHidden": 0,
+        "forUsers": "Z003NW1X",
+        "filterObject": "%5B%7B%22sFieldName%22%3A%22LOCAT_CAL%22%2C%22aTokens%22%3A%22%5B%7B%5C%22sKey%5C%22%3A%5C%22DA1%5C%22%2C%5C%22sText%5C%22%3A%5C%22DA1%20%28DA1%29%5C%22%2C%5C%22sCustomData%5C%22%3A%5C%22%7B%5C%5C%5C%22__metadata%5C%5C%5C%22%3A%7B%5C%5C%5C%22type%5C%5C%5C%22%3A%5C%5C%5C%22siemens.COMMON_DEV.xs.services.tableViewerOData.srv1.FreeDateCrossPlantType%5C%5C%5C%22%2C%5C%5C%5C%22uri%5C%5C%5C%22%3A%5C%5C%5C%22https%3A//demchdc9scx.dc4ca.siemens.de%3A4300/siemens/COMMON_DEV/xs/services/tableViewerOData/srv1.xsodata/FreeDateCrossPlant%28%2744360949193629671%27%29%5C%5C%5C%22%7D%2C%5C%5C%5C%22LOCAT_CAL%5C%5C%5C%22%3A%5C%5C%5C%22DA1%5C%5C%5C%22%7D%5C%22%7D%5D%22%7D%5D"
+      }
+    ]
+  }
+}

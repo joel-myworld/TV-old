@@ -1,0 +1,29 @@
+<core:FragmentDefinition
+            xmlns="sap.m"
+            xmlns:l="sap.ui.layout"
+            xmlns:f="sap.ui.layout.form"
+            xmlns:core="sap.ui.core">
+       <Dialog id = "siemensUiCellColorDialog" title="{i18n>cellConfig.dialog.xtit}" beforeOpen="onBeforeOpeCellColorDialog" afterClose="onAfterCloseCellColorDialog" contentHeight="70%" contentWidth="85%">
+          <content>
+            <f:SimpleForm id="siemensUiCellColorForm"
+                minWidth="1024"
+                maxContainerCols="6"
+                editable="true"
+                layout="ResponsiveGridLayout"
+                title="{i18n>cellConfig.form.xtit}"
+                labelSpanL="2"
+                labelSpanM="2"
+                emptySpanL="0"
+                emptySpanM="0"
+                columnsL="6"
+                columnsM="6">
+                <f:content>
+                </f:content>
+              </f:SimpleForm>
+          </content>
+          <buttons>
+            <Button text="{i18n>cellConfig.form.save}" type = "Emphasized" press="onSaveCellColorDialog"/>
+      			<Button text="{i18n>cellConfig.form.cancel}" press="onCloseCellColorDialog" />
+      		</buttons>
+      </Dialog>
+</core:FragmentDefinition>

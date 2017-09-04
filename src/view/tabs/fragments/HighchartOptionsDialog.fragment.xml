@@ -1,0 +1,17 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core"
+						 xmlns:f="sap.ui.layout.form"
+						 xmlns:l="sap.ui.layout"
+						 xmlns="sap.m">
+	<Dialog id="siemensHighchartOptionsDialog" class="sapUiPopupWithPadding" title="{i18n>dialog.highchartsOptions}" beforeOpen="onBeforeOpenHighchartOptionsDialog" afterClose="onAfterCloseHighchartOptionsDialog" contentWidth="30%">
+		<content>
+			<f:SimpleForm id="siemensHighchartOptionsForm" title="">
+				<f:content>
+                </f:content>
+			</f:SimpleForm>
+		</content>
+		<buttons>
+			<Button id="onReverseOk" press="onHighchartsOk" text="{i18n>dialog.highchartsOptions.button.ok}"/>
+			<Button id="onReverseCancel" press="onHighchartsCancel" text="{i18n>dialog.highchartsOptions.button.cancel}"/>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>

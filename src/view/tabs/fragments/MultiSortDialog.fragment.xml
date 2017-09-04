@@ -1,0 +1,28 @@
+<core:FragmentDefinition
+		xmlns="sap.m"
+		xmlns:core="sap.ui.core">
+	<P13nDialog
+			ok="handleMultiSortOk"
+			cancel="handleMultiSortCancel"
+			contentWidth="60%"
+			contentHeight="50%">
+		<panels>
+			<P13nSortPanel
+				title="Sort"
+				type="sort"
+				containerQuery="true"
+
+				items="{
+                    path: 'sortDialogModel>/items'
+                }"
+                sortItems="{
+                    path: 'sortDialogModel>/sortItems'
+                }">
+				<P13nItem columnKey="{sortDialogModel>columnKey}" text="{sortDialogModel>text}" />
+				<sortItems>
+					<P13nSortItem columnKey="{sortDialogModel>columnKey}" operation="{sortDialogModel>operation}" />
+				</sortItems>
+			</P13nSortPanel>
+		</panels>
+	</P13nDialog>
+</core:FragmentDefinition>

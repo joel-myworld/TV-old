@@ -1,0 +1,19 @@
+.siemensTextBold{
+    font-weight: bold;
+}
+canvas {
+	display:block;
+}
+.sapUiCompFilterBarAddFilterLabel {
+	position: absolute !important;
+}
+.dispNone{
+	display:none;
+}
+.dispTab{
+	display:block;
+}
+
+.panelVariantMngt .sapMPanelContent {
+	padding: 0 0 0 2rem;
+}

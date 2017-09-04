@@ -1,0 +1,42 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
+	<edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="2.0">
+		<Schema xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="siemens.COMMON_DEV.xs.services.tableViewerOData.variants">
+			<EntityType Name="VariantsSetType">
+				<Key>
+					<PropertyRef Name="CTRLID" />
+					<PropertyRef Name="VariantId" />
+					<PropertyRef Name="UserId" />
+				</Key>
+				<Property Name="CTRLID" Type="Edm.String" Nullable="false" MaxLength="100"/>
+				<Property Name="VariantId" Type="Edm.String" Nullable="false" MaxLength="50"/>
+				<Property Name="UserId" Type="Edm.String" Nullable="false" MaxLength="50"/>
+				<Property Name="VariantName" Type="Edm.String" MaxLength="200"/>
+				<Property Name="isDefault" Type="Edm.Byte"/>
+				<Property Name="isGlobal" Type="Edm.Byte"/>
+				<Property Name="filterObject" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="isHidden" Type="Edm.Byte"/>
+				<Property Name="forUsers" Type="Edm.String" MaxLength="5000"/>
+			</EntityType>
+			<EntityType Name="VariantsGetType">
+				<Key>
+					<PropertyRef Name="CTRLID" />
+					<PropertyRef Name="VariantId" />
+					<PropertyRef Name="UserId" />
+				</Key>
+				<Property Name="CTRLID" Type="Edm.String" Nullable="false" MaxLength="100"/>
+				<Property Name="VariantId" Type="Edm.String" Nullable="false" MaxLength="50"/>
+				<Property Name="UserId" Type="Edm.String" Nullable="false" MaxLength="50"/>
+				<Property Name="VariantName" Type="Edm.String" MaxLength="200"/>
+				<Property Name="isDefault" Type="Edm.Byte"/>
+				<Property Name="isGlobal" Type="Edm.Byte"/>
+				<Property Name="filterObject" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="isHidden" Type="Edm.Byte"/>
+				<Property Name="forUsers" Type="Edm.String" MaxLength="5000"/>
+			</EntityType>
+			<EntityContainer Name="variants" m:IsDefaultEntityContainer="true">
+				<EntitySet Name="VariantsSet" EntityType="siemens.COMMON_DEV.xs.services.tableViewerOData.variants.VariantsSetType" />
+				<EntitySet Name="VariantsGet" EntityType="siemens.COMMON_DEV.xs.services.tableViewerOData.variants.VariantsGetType" />
+			</EntityContainer>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

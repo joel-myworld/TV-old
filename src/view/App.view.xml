@@ -1,0 +1,4 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.siemens.tableViewer.controller.App" displayBlock="true"
+		  xmlns="sap.m">
+	<App id="app" />
+</mvc:View>

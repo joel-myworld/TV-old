@@ -1,0 +1,130 @@
+<mvc:View
+        controllerName="com.siemens.tableViewer.controller.TableViewer"
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core"
+        xmlns:l="sap.ui.layout"
+        xmlns:fb="sap.ui.comp.filterbar"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns:variant="sap.ui.comp.variants"
+        xmlns:custom="com.siemens.tableViewer.control"
+        xmlns:smartTable="sap.ui.comp.smarttable"
+        xmlns:customData="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<Page id="page" navButtonPress="onNavBack" showNavButton="true" title="{ path: 'mainConfig>/DESCRIPTION'}">
+		<headerContent>
+             <!-- Header EXTENSION POINT -->
+	         <core:ExtensionPoint name="siemensUiHeaderExtension1"/>         	
+        	<Text text="v2.22.1"/>
+             <!-- Header EXTENSION POINT -->
+	         <core:ExtensionPoint name="siemensUiHeaderExtension2"/>         	
+        	<Button
+             	visible="{= ${mainConfig>/INPUT_PARAMETERS} === 1 ? true : false}"
+             	press="onInputParameterDialogCall"
+             	icon="sap-icon://dimension" />
+             <!-- Header EXTENSION POINT -->
+	         <core:ExtensionPoint name="siemensUiHeaderExtension3"/>         	
+		</headerContent>
+        <content>
+            <!-- PAGE EXTENSION POINT -->
+            <core:ExtensionPoint name="siemensUiPageExtension1"/>
+
+            <!-- FILTER BAR SECTION -->
+            <l:VerticalLayout id="siemensMainFilterLayout" width="100%">
+                <Panel visible="{path:'mainConfig>/VARIANT_HIDDEN', formatter:'.formatter.hideVariant'}"
+                       busy="{variantView>/busy}"
+                       class="panelVariantMngt">
+                    <content>
+                        <custom:CustomVariantManagement
+                        		id="siemensUiVariantManagement"
+                                select="onVariantSelect"
+                                save="onVariantSave"
+                                enabled="true"
+                                manage="onVariantManage"
+                                showExecuteOnSelection="false"
+                                showShare="false" />
+                        <l:HorizontalLayout class="sapUICompVarMngmtLayout">
+                            <Button text="{i18n>variant.shared.text}" icon="sap-icon://share-2" type="Transparent" press="onManageSharedVariants" 
+                                visible="{path: 'authModel>/SHARE_VARIANT', formatter: '.formatter.setTrueIfValueEqOne'}"/>
+                        </l:HorizontalLayout>
+                    </content>
+                </Panel>
+                <fb:FilterBar id="siemens.ui.filterbar"
+                              search="onSearch"
+                              clear="onClear"
+                              showRestoreButton="false"
+                              showClearOnFB="true"
+                              showClearButton="true"/>
+            </l:VerticalLayout>
+
+            <!-- PAGE EXTENSION POINT -->
+            <core:ExtensionPoint name="siemensUiPageExtension2"/>
+
+            <!-- ICON TAB BAR SECTION -->
+            <IconTabBar id="iconTabBar"
+                        expandable="false"
+                        select="onTabSelect"
+						stretchContentHeight="false"
+						applyContentPadding="false"
+                        selectedKey="{view>/selectedTabKey}">
+                <items>
+                	<!-- ICON TAB BAR EXTENSION POINT -->
+                    <core:ExtensionPoint name="siemensUiTabExtension1" />
+                    
+                    <IconTabFilter id="siemens.ui.table"
+                                   key="Table"
+                                   icon="sap-icon://database"
+                                   iconColor="Default"
+                                   visible="{
+														 parts: [ 'mainConfig>/IS_HIERARCHY', 'mainConfig>/ODATA_SRV', 'mainConfig>/IS_MIXED' ],
+														 formatter: '.formatter.hideTableTab'
+													 }"
+                                   text="{i18n>iconTabBar.table}"/>
+
+					<!-- ICON TAB BAR EXTENSION POINT -->
+                    <core:ExtensionPoint name="siemensUiTabExtension2" />
+
+                    <IconTabFilter id="siemens.ui.chart"
+                                   key="Chart"
+                                   icon="sap-icon://bar-chart"
+                                   iconColor="Default"
+                                   visible="{
+														 parts: [ 'mainConfig>/IS_HIERARCHY', 'mainConfig>/ODATA_SRV', 'mainConfig>/CHART_HIDDEN', 'mainConfig>/IS_MIXED' ],
+														 formatter: '.formatter.hideChartTab'
+													 }"
+                                   text="{i18n>iconTabBar.chart}"/>
+
+					<!-- ICON TAB BAR EXTENSION POINT -->
+                    <core:ExtensionPoint name="siemensUiTabExtension3" />
+
+                    <IconTabFilter id="siemens.ui.tree"
+                                   key="Tree"
+                                   icon="sap-icon://tree"
+                                   iconColor="Default"
+                                   visible="{
+														 parts: [ 'mainConfig>/IS_HIERARCHY', 'mainConfig>/ODATA_SRV', 'mainConfig>/IS_MIXED' ],
+														 formatter: '.formatter.hideTreeTab'
+													 }"
+                                   text="{i18n>iconTabBar.treeTable}"/>
+                	
+                	<!-- ICON TAB BAR EXTENSION POINT -->
+                    <core:ExtensionPoint name="siemensUiTabExtension4" />
+                    
+                    <IconTabFilter id="siemens.ui.mix"
+                                   key="Mix"
+                                   icon="sap-icon://Chart-Tree-Map"
+                                   iconColor="Default"
+                                   text="{i18n>iconTabBar.Mix}"
+                                   visible="{
+														 parts: [ 'mainConfig>/IS_HIERARCHY', 'mainConfig>/ODATA_SRV', 'mainConfig>/IS_MIXED' ],
+														 formatter: '.formatter.hideMixTab'
+													 }"/>
+                	
+                	<!-- ICON TAB BAR EXTENSION POINT -->
+                    <core:ExtensionPoint name="siemensUiTabExtension5" />
+                </items>
+            </IconTabBar>
+            
+            <!-- PAGE EXTENSION POINT -->
+            <core:ExtensionPoint name="siemensUiPageExtension3"/>
+        </content>
+    </Page>
+</mvc:View>

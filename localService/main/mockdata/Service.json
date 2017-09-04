@@ -1,0 +1,98 @@
+{
+	"d": {
+		"results": [{
+			"__metadata": {
+				"type": "siemens.COMMON_DEV.xs.services.tableViewerOData.main.ServiceType",
+				"uri": "https://demchdc9scx.dc4ca.siemens.de:4300/siemens/COMMON_DEV/xs/services/tableViewerOData/main.xsodata/Service('CTRL1')"
+			},
+			"CTRLID": "CTRL1",
+			"DESCRIPTION": "Title is coming from Backend",
+			"IS_HIERARCHY": 0,
+			"ODATA_SRV": 1,
+			"SERVICE_NAME": "srv1.xsodata",
+			"ENTITY_NAME": "FreeDateCrossPlant",
+			"TABLE_TITLE": "Table Title",
+			"THRESHOLD": 100,
+			"CHART_HIDDEN": 0,
+			"VARIANT_HIDDEN": 0,
+			"INPUT_PARAMETERS": 0,
+			"DRILL_DOWN": 1,
+			"DRILL_DOWN_TARGET": "CTRL1",
+			"INTERACTIVE_TABLE": 0,
+			"ServiceColumns": {
+				"__deferred": {
+					"uri": "https://demchdc9scx.dc4ca.siemens.de:4300/siemens/COMMON_DEV/xs/services/tableViewerOData/main.xsodata/Service('CTRL1')/ServiceColumns"
+				}
+			}
+		}, {
+			"__metadata": {
+				"type": "siemens.COMMON_DEV.xs.services.tableViewerOData.main.ServiceType",
+				"uri": "https://demchdc9scx.dc4ca.siemens.de:4300/siemens/COMMON_DEV/xs/services/tableViewerOData/main.xsodata/Service('CTRL3')"
+			},
+			"CTRLID": "CTRL3",
+			"DESCRIPTION": "Worst Five ({0})",
+			"IS_HIERARCHY": 0,
+			"ODATA_SRV": 1,
+			"SERVICE_NAME": "srv3.xsodata",
+			"ENTITY_NAME": "WorstFive",
+			"TABLE_TITLE": null,
+			"ServiceColumns": {
+				"__deferred": {
+					"uri": "https://demchdc9scx.dc4ca.siemens.de:4300/siemens/COMMON_DEV/xs/services/tableViewerOData/main.xsodata/Service('CTRL3')/ServiceColumns"
+				}
+			}
+		}, {
+			"__metadata": {
+				"type": "siemens.COMMON_DEV.xs.services.tableViewerOData.main.ServiceType",
+				"uri": "https://demchdc9scx.dc4ca.siemens.de:4300/siemens/COMMON_DEV/xs/services/tableViewerOData/main.xsodata/Service('CTRL4')"
+			},
+			"CTRLID": "CTRL4",
+			"DESCRIPTION": "Overdue Full ({0})",
+			"IS_HIERARCHY": 0,
+			"ODATA_SRV": 1,
+			"SERVICE_NAME": "overdue_full.xsodata",
+			"ENTITY_NAME": "OverdueFull",
+			"TABLE_TITLE": null,
+			"ServiceColumns": {
+				"__deferred": {
+					"uri": "https://demchdc9scx.dc4ca.siemens.de:4300/siemens/COMMON_DEV/xs/services/tableViewerOData/main.xsodata/Service('CTRL4')/ServiceColumns"
+				}
+			}
+		}, {
+			"__metadata": {
+				"type": "siemens.COMMON_DEV.xs.services.tableViewerOData.main.ServiceType",
+				"uri": "https://demchdc9scx.dc4ca.siemens.de:4300/siemens/COMMON_DEV/xs/services/tableViewerOData/main.xsodata/Service('CTRL5')"
+			},
+			"CTRLID": "CTRL5",
+			"DESCRIPTION": "Fehleranzahl Crossplant ({0})",
+			"IS_HIERARCHY": 0,
+			"ODATA_SRV": 1,
+			"SERVICE_NAME": "fehleranzahl_crossplant.xsodata",
+			"ENTITY_NAME": "FehleranzahlCrossplant",
+			"TABLE_TITLE": null,
+			"ServiceColumns": {
+				"__deferred": {
+					"uri": "https://demchdc9scx.dc4ca.siemens.de:4300/siemens/COMMON_DEV/xs/services/tableViewerOData/main.xsodata/Service('CTRL5')/ServiceColumns"
+				}
+			}
+		}, {
+			"__metadata": {
+				"type": "siemens.COMMON_DEV.xs.services.tableViewerOData.main.ServiceType",
+				"uri": "https://demchdc9scx.dc4ca.siemens.de:4300/siemens/COMMON_DEV/xs/services/tableViewerOData/main.xsodata/Service('CTRL6')"
+			},
+			"CTRLID": "CTRL6",
+			"DESCRIPTION": "Hierarchy example",
+			"IS_HIERARCHY": 1,
+			"ODATA_SRV": 0,
+			"SERVICE_NAME": "getHierarchyV4.xsjs",
+			"ENTITY_NAME": "",
+			"TABLE_TITLE": "Hierarchy",
+			"INTERACTIVE_TABLE": 1,
+			"ServiceColumns": {
+				"__deferred": {
+					"uri": "https://demchdc9scx.dc4ca.siemens.de:4300/siemens/COMMON_DEV/xs/services/tableViewerOData/main.xsodata/Service('CTRL6')/ServiceColumns"
+				}
+			}
+		}]
+	}
+}

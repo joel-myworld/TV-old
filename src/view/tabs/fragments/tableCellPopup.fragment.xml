@@ -1,0 +1,19 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:t="sap.ui.table"
+        xmlns:core="sap.ui.core">
+    <Dialog id="siemensUiPopupDialog" title="" beforeOpen="onBeforeOpenDrillDown" afterClose="onAfterCloseDrillDown" class="sapUiPopupWithPadding">
+        <content>
+            <t:Table id = "siemensUiPopupTable" enableBusyIndicator = "true">
+                <t:toolbar>
+                    <Toolbar design="Transparent">
+                        <Title id="siemensUiTablePopupTitle" text=""/>
+                    </Toolbar>
+                </t:toolbar>
+            </t:Table> 
+        </content>
+            <endButton>
+                <Button text="Close" press="onTableCellPopupClose" />
+            </endButton>
+    </Dialog>
+</core:FragmentDefinition>

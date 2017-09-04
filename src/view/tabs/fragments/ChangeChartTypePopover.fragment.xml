@@ -1,0 +1,15 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core">
+    <Popover placement="Bottom" showHeader="false">
+        <List
+                items="{chartButtonsTypes>/buttons}">
+            <StandardListItem
+                    title="{chartButtonsTypes>title}"
+                    icon="{chartButtonsTypes>icon}"
+                    visible="{chartButtonsTypes>enabled}"
+                    press="onChangeChartType"
+                    type="{chartButtonsTypes>type}"/>
+        </List>
+    </Popover>
+</core:FragmentDefinition>

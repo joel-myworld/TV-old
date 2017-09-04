@@ -1,0 +1,109 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
+	<edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="2.0">
+		<Schema xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" 
+			xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="siemens.COMMON_DEV.xs.services.tableViewerOData.main">
+			<EntityType Name="ServiceType">
+				<Key>
+					<PropertyRef Name="CTRLID" />
+				</Key>
+				<Property Name="CTRLID" Type="Edm.String" Nullable="false" MaxLength="100" />
+				<Property Name="DESCRIPTION" Type="Edm.String" MaxLength="80" />
+				<Property Name="TABLE_TITLE" Type="Edm.String" MaxLength="300" />
+				<Property Name="ODATA_SRV" Type="Edm.Int32" />
+				<Property Name="SERVICE_NAME" Type="Edm.String" MaxLength="100" />
+				<Property Name="ENTITY_NAME" Type="Edm.String" MaxLength="100" />
+				<Property Name="IS_HIERARCHY" Type="Edm.Int32" />
+				<Property Name="DATA_SOURCE" Type="Edm.String" MaxLength="200" />
+				<Property Name="THRESHOLD" Type="Edm.Int32" />
+				<Property Name="CHART_HIDDEN" Type="Edm.Int32" />
+				<Property Name="VARIANT_HIDDEN" Type="Edm.Int32" />
+				<Property Name="INPUT_PARAMETERS" Type="Edm.Int32" />
+				<Property Name="DRILL_DOWN" Type="Edm.Byte"/>
+				<Property Name="DRILL_DOWN_TARGET" Type="Edm.String" MaxLength="100"/>
+				<NavigationProperty Name="ServiceColumns" Relationship="siemens.COMMON_DEV.xs.services.tableViewerOData.main.Service_ColumnType"
+					FromRole="ServicePrincipal" ToRole="ColumnDependent" />
+			</EntityType>
+			<EntityType Name="ColumnType">
+				<Key>
+					<PropertyRef Name="CTRLID" />
+					<PropertyRef Name="COLUMN" />
+				</Key>
+				<Property Name="CTRLID" Type="Edm.String" Nullable="false" MaxLength="100" />
+				<Property Name="COLUMN" Type="Edm.String" Nullable="false" MaxLength="200" />
+				<Property Name="LABEL" Type="Edm.String" MaxLength="200" />
+				<Property Name="DESCRIPTION" Type="Edm.String" MaxLength="80" />
+				<Property Name="IS_KFG" Type="Edm.Int32" />
+				<Property Name="FILTERTYPE" Type="Edm.String" MaxLength="100" />
+				<Property Name="STDRD" Type="Edm.Int16" Nullable="false" />
+				<Property Name="SORTORDER" Type="Edm.Int32" />
+				<Property Name="FILTER" Type="Edm.Int16" />
+				<Property Name="CTYPE" Type="Edm.Int32" />
+				<Property Name="CWIDTH" Type="Edm.String" MaxLength="8" />
+				<Property Name="COLOR_CODE" Type="Edm.String" MaxLength="20" />
+				<Property Name="AGGREGATE" Type="Edm.Int32" />
+				<Property Name="SUPPORT_HIDDEN" Type="Edm.Int32" />
+				<Property Name="IS_LINK" Type="Edm.Int32" />
+				<Property Name="LINK_TARGET" Type="Edm.String" MaxLength="200" />
+				<Property Name="LINK_KEY_FIELDS" Type="Edm.String" MaxLength="200" />
+				<Property Name="ONFILTERBAR" Type="Edm.Byte" />
+				<Property Name="DRILL_DOWN_BOND" Type="Edm.String" MaxLength="200" />
+			</EntityType>
+			<EntityType Name="ChartsType">
+				<Key>
+					<PropertyRef Name="CTRLID" />
+					<PropertyRef Name="CHARTID" />
+				</Key>
+				<Property Name="CTRLID" Type="Edm.String" Nullable="false" MaxLength="100" />
+				<Property Name="CHARTID" Type="Edm.String" Nullable="false" MaxLength="100" />
+				<Property Name="TITLE" Type="Edm.String" MaxLength="300" />
+				<Property Name="VISIBLE" Type="Edm.Byte" />
+				<Property Name="TYPE" Type="Edm.String" MaxLength="100" />
+				<NavigationProperty Name="ChartsDimensionsMeasures" Relationship="siemens.COMMON_DEV.xs.services.tableViewerOData.main.Charts_DimensionsMeasuresType"
+					FromRole="ChartsPrincipal" ToRole="DimensionsMeasuresDependent" />
+			</EntityType>
+			<EntityType Name="DimensionsMeasuresType">
+				<Key>
+					<PropertyRef Name="CTRLID" />
+					<PropertyRef Name="CHARTID" />
+					<PropertyRef Name="COLUMN" />
+				</Key>
+				<Property Name="CTRLID" Type="Edm.String" Nullable="false" MaxLength="100" />
+				<Property Name="CHARTID" Type="Edm.String" Nullable="false" MaxLength="100" />
+				<Property Name="COLUMN" Type="Edm.String" Nullable="false" MaxLength="200" />
+				<Property Name="LABEL" Type="Edm.String" MaxLength="200" />
+				<Property Name="IS_KFG" Type="Edm.Int32" />
+				<Property Name="CTYPE" Type="Edm.Int32" />
+			</EntityType>
+			<Association Name="Service_ColumnType">
+				<End Type="siemens.COMMON_DEV.xs.services.tableViewerOData.main.ServiceType" Role="ServicePrincipal" Multiplicity="1" />
+				<End Type="siemens.COMMON_DEV.xs.services.tableViewerOData.main.ColumnType" Role="ColumnDependent" Multiplicity="*" />
+				<ReferentialConstraint>
+                    <Principal Role="ServicePrincipal">
+                        <PropertyRef Name="CTRLID" />
+                    </Principal>
+                    <Dependent Role="ColumnDependent">
+                        <PropertyRef Name="CTRLID" />
+                    </Dependent>
+                </ReferentialConstraint>
+			</Association>
+			<Association Name="Charts_DimensionsMeasuresType">
+				<End Type="siemens.COMMON_DEV.xs.services.tableViewerOData.main.ChartsType" Role="ChartsPrincipal" Multiplicity="1" />
+				<End Type="siemens.COMMON_DEV.xs.services.tableViewerOData.main.DimensionsMeasuresType" Role="DimensionsMeasuresDependent" Multiplicity="*" />
+			</Association>
+			<EntityContainer Name="main" m:IsDefaultEntityContainer="true">
+				<EntitySet Name="Service" EntityType="siemens.COMMON_DEV.xs.services.tableViewerOData.main.ServiceType" />
+				<EntitySet Name="Column" EntityType="siemens.COMMON_DEV.xs.services.tableViewerOData.main.ColumnType" />
+				<EntitySet Name="Charts" EntityType="siemens.COMMON_DEV.xs.services.tableViewerOData.main.ChartsType" />
+				<EntitySet Name="DimensionsMeasures" EntityType="siemens.COMMON_DEV.xs.services.tableViewerOData.main.DimensionsMeasuresType" />
+				<AssociationSet Name="Service_Column" Association="siemens.COMMON_DEV.xs.services.tableViewerOData.main.Service_ColumnType">
+					<End Role="ServicePrincipal" EntitySet="Service" />
+					<End Role="ColumnDependent" EntitySet="Column" />
+				</AssociationSet>
+				<AssociationSet Name="Charts_DimensionsMeasures" Association="siemens.COMMON_DEV.xs.services.tableViewerOData.main.Charts_DimensionsMeasuresType">
+					<End Role="ChartsPrincipal" EntitySet="Charts" />
+					<End Role="DimensionsMeasuresDependent" EntitySet="DimensionsMeasures" />
+				</AssociationSet>
+			</EntityContainer>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

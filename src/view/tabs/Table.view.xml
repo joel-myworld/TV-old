@@ -1,0 +1,43 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+		  xmlns:m="sap.m"
+		  xmlns="sap.ui.table"
+		  xmlns:core="sap.ui.core"
+		  xmlns:l="sap.ui.layout"
+		  xmlns:custom="com.siemens.tableViewer.control"
+		  xmlns:t="sap.ui.table"
+		  displayBlock="true"
+		  controllerName="com.siemens.tableViewer.controller.tabs.Table">
+			<custom:CustomTable id="siemensUiTable"
+								enableBusyIndicator="true"
+								visibleRowCountMode="{path: 'mainConfig>/INTERACTIVE_TABLE', formatter: '.formatter.isTableInteractive'}"
+								editable="false"
+								showNoData="false"
+								rowHeight="23"
+								enableSelectAll="{= ${mainConfig>/DRILL_DOWN} !== 1}"
+								selectionMode="{= ${mainConfig>/DRILL_DOWN} === 1 ? 'MultiToggle' : 'Multi'}"
+								rowSelectionChange="onRowSelectionChange"
+								threshold="{path: 'mainConfig>/THRESHOLD', formatter: '.formatter.getThreshold'}"
+								busy="{tableView>/busy}"
+								busyIndicatorDelay="{tableView>/delay}">
+				<custom:toolbar>
+					<m:Toolbar design="Transparent">
+						<m:Title text="{mainConfig>/TABLE_TITLE} [{tableView>/rowCount}]"/>
+						<core:Icon src="sap-icon://vertical-grip"
+								   visible="{path: 'mainConfig>/DRILL_DOWN', formatter: '.formatter.setTrueIfValueEqOne'}"/>
+						<m:Button text="{i18n>table.showDetails}" press="onDrillDown"
+								  visible="{path: 'mainConfig>/DRILL_DOWN', formatter: '.formatter.setTrueIfValueEqOne'}"
+								  enabled="{tableView>/enableShowDetailsButton}"/>
+						<m:ToolbarSpacer/>
+						<m:Button text="{i18n>table.cellConfig}" type="Transparent" icon="sap-icon://palette"
+								  iconFirst="true" visible = "{path: 'authModel>/ADMIN', formatter: '.formatter.setTrueIfValueEqOne'}" press="onPressColorConfiguration"/>
+						<core:Icon src="sap-icon://vertical-grip"/>
+						<m:ToggleButton icon="sap-icon://full-screen" pressed="false" press="onToggleFullScreen" visible="{= ${mainConfig>/IS_MIXED} !== 1}"/>
+						<m:Button type="Default" text="{i18n>table.export}" icon="sap-icon://download"
+								  press="onExportToExcel"/>
+						<m:Button type="Default" icon="sap-icon://sort" press="onMultiSorterDialog"/>
+						<m:Button type="Default" icon="sap-icon://action-settings" press="onTablePersonalization"/>
+					</m:Toolbar>
+				</custom:toolbar>
+			</custom:CustomTable>
+			<l:VerticalLayout id="siemensUiDetailTableLayout" visible="false"/>
+</mvc:View>

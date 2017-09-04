@@ -1,0 +1,31 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+	<edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="2.0">
+		<Schema
+			xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+			xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+			xmlns="http://schemas.microsoft.com/ado/2008/09/edm"
+			Namespace="siemens.COMMON_DEV.xs.services.tableViewerOData.srv1">
+			<EntityType Name="FreeDateCrossPlantType" sap:semantics="aggregate">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" Nullable="false" MaxLength="2147483647" sap:filterable="false"/>
+				<Property Name="CALMONTH" Type="Edm.String" MaxLength="6" sap:label="CALMONTH" sap:aggregation-role="dimension"/>
+				<Property Name="TESTL" Type="Edm.String" MaxLength="12" sap:label="TESTL" sap:aggregation-role="dimension"/>
+				<Property Name="LOCAT_CAL" Type="Edm.String" MaxLength="10" sap:label="LOCAT_CAL" sap:aggregation-role="dimension"/>
+				<Property Name="SELEC" Type="Edm.String" MaxLength="12" sap:label="SELEC" sap:aggregation-role="dimension"/>
+				<Property Name="ERDAT" Type="Edm.String" MaxLength="8" sap:label="ERDAT" sap:aggregation-role="dimension"/>
+				<Property Name="ERDAT_DATE" Type="Edm.DateTime" sap:display-format="Date" sap:label="ERDAT_DATE" sap:aggregation-role="dimension"/>
+				<Property Name="KEYDATE_1" Type="Edm.DateTime" sap:display-format="Date" sap:label="SELECTION DATE FROM" sap:aggregation-role="dimension"/>
+				<Property Name="KEYDATE_2" Type="Edm.DateTime" sap:display-format="Date" sap:label="Selection Date TO" sap:aggregation-role="dimension"/>
+				<Property Name="NUCAF" Type="Edm.Int32" sap:filterable="false" sap:label="NUCAF" sap:aggregation-role="measure"/>
+				<Property Name="DELTA" Type="Edm.Decimal" Precision="18" Scale="0" sap:filterable="false" sap:label="Development(Delta)" sap:aggregation-role="measure"/>
+				<Property Name="SELNUCAF" Type="Edm.Int32" sap:filterable="false" sap:label="Selection NCF No. Failed" sap:aggregation-role="measure"/>
+				<Property Name="COMPNUCAF" Type="Edm.Int32" sap:filterable="false" sap:label="Compare NUCAF No. Failed" sap:aggregation-role="measure"/>
+			</EntityType>
+			<EntityContainer Name="srv1" m:IsDefaultEntityContainer="true">
+				<EntitySet Name="FreeDateCrossPlant" EntityType="siemens.COMMON_DEV.xs.services.tableViewerOData.srv1.FreeDateCrossPlantType"/>
+			</EntityContainer>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
